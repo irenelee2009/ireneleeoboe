@@ -13,41 +13,37 @@
 }
 html,body { height:100%; font-family:'DM Sans',sans-serif; color:var(--ink); background:var(--ivory); overflow:hidden; }
 
-/* NAV */
 nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify-content:space-between; align-items:center; padding:0 56px; height:64px; transition:background 0.4s; }
 nav.on-home { background:transparent; border-bottom:1px solid rgba(255,255,255,0.15); }
 nav.on-page { background:rgba(250,250,247,0.96); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
 .nav-logo { font-family:'Cinzel',serif; font-size:16px; font-weight:600; letter-spacing:2px; cursor:pointer; transition:color 0.3s; }
-nav.on-home .nav-logo { color:var(--white); }
+nav.on-home .nav-logo { color:#fff; }
 nav.on-page .nav-logo { color:var(--ink); }
 .nav-links { display:flex; }
 .nav-link { padding:0 20px; height:64px; display:flex; align-items:center; font-size:11px; letter-spacing:2.5px; text-transform:uppercase; font-weight:500; cursor:pointer; border-bottom:2px solid transparent; transition:all 0.2s; }
 nav.on-home .nav-link { color:rgba(255,255,255,0.7); }
-nav.on-home .nav-link:hover, nav.on-home .nav-link.active { color:var(--white); border-bottom-color:var(--white); }
+nav.on-home .nav-link:hover, nav.on-home .nav-link.active { color:#fff; border-bottom-color:#fff; }
 nav.on-page .nav-link { color:var(--muted); }
 nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); border-bottom-color:var(--sage); }
 
-/* PAGES */
 .page { position:fixed; inset:0; overflow-y:auto; transition:opacity 0.4s ease,transform 0.4s ease; opacity:0; pointer-events:none; transform:translateY(12px); }
 .page.active { opacity:1; pointer-events:all; transform:translateY(0); }
 
-/* HOME */
 #page-home { display:flex; align-items:center; justify-content:center; }
-.home-bg { position:absolute; inset:0; background-size:cover; background-position:center top; }
-.home-overlay { position:absolute; inset:0; background:linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.15) 100%); }
+.home-bg { position:absolute; inset:0; background-image:url('photo.jpg'); background-size:cover; background-position:center top; }
+.home-overlay { position:absolute; inset:0; background:linear-gradient(to right,rgba(0,0,0,0.72) 0%,rgba(0,0,0,0.45) 55%,rgba(0,0,0,0.15) 100%); }
 .home-content { position:relative; z-index:2; padding:0 56px; max-width:680px; animation:home-in 1.2s ease both; }
 @keyframes home-in { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
 .home-eyebrow { font-size:11px; letter-spacing:4px; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-bottom:20px; }
-.home-name { font-family:'Cinzel',serif; font-size:clamp(44px,7vw,88px); font-weight:600; line-height:1.05; color:var(--white); margin-bottom:16px; letter-spacing:2px; }
+.home-name { font-family:'Cinzel',serif; font-size:clamp(44px,7vw,88px); font-weight:600; line-height:1.05; color:#fff; margin-bottom:16px; letter-spacing:2px; }
 .home-title { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:clamp(18px,2vw,24px); color:rgba(255,255,255,0.65); margin-bottom:48px; }
 .home-divider { width:48px; height:1px; background:rgba(255,255,255,0.35); margin-bottom:40px; }
 .home-tags { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:36px; }
 .home-tag { padding:7px 18px; border:1px solid rgba(255,255,255,0.25); font-size:10px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.6); }
 .home-social { display:flex; gap:14px; }
 .social-btn { display:inline-flex; align-items:center; padding:10px 22px; border:1px solid rgba(255,255,255,0.2); color:rgba(255,255,255,0.65); font-size:11px; letter-spacing:2px; text-transform:uppercase; text-decoration:none; transition:all 0.2s; font-weight:500; }
-.social-btn:hover { border-color:rgba(255,255,255,0.5); color:white; }
+.social-btn:hover { border-color:rgba(255,255,255,0.5); color:#fff; }
 
-/* INNER */
 .inner { padding-top:64px; min-height:100vh; }
 .inner-hero { background:var(--white); padding:80px 56px 64px; border-bottom:1px solid var(--border); }
 .inner-eyebrow { font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--sage); font-weight:500; margin-bottom:12px; }
@@ -55,7 +51,6 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
 .inner-title em { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:300; color:var(--sage); }
 .inner-body { max-width:880px; margin:0 auto; padding:64px 56px; }
 
-/* BIO */
 .bio-text p { font-family:'Cormorant Garamond',serif; font-size:20px; line-height:1.9; color:var(--ink2); margin-bottom:24px; }
 .bio-pull { margin:48px 0; padding:28px 36px; border-left:3px solid var(--sage); background:var(--sage-light); border-radius:0 6px 6px 0; }
 .bio-pull p { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:22px !important; color:var(--ink) !important; margin:0 !important; line-height:1.6 !important; }
@@ -64,7 +59,6 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
 .bio-info-label { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
 .bio-info-value { font-family:'Cormorant Garamond',serif; font-size:17px; color:var(--ink); line-height:1.4; }
 
-/* AWARDS */
 .awards-table { width:100%; border-collapse:collapse; }
 .awards-table thead tr { background:var(--warm); }
 .awards-table th { text-align:left; padding:13px 20px; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); font-weight:500; border-bottom:1px solid var(--border); }
@@ -81,7 +75,6 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
 .b-gray { background:#F0F0EE; color:var(--muted); }
 .section-divider { padding:12px 20px; background:#f8f8f5; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#888; font-weight:500; border-bottom:1px solid var(--border); border-top:1px solid var(--border); }
 
-/* VIDEO */
 .video-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
 .video-card { border:1px solid var(--border); border-radius:6px; overflow:hidden; transition:box-shadow 0.2s,border-color 0.2s; }
 .video-card:hover { border-color:var(--sage); box-shadow:0 6px 24px rgba(122,158,135,0.12); }
@@ -90,7 +83,6 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
 .video-title { font-size:15px; font-weight:500; color:var(--ink); margin-bottom:4px; }
 .video-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:14px; color:var(--muted); }
 
-/* GALLERY */
 .gallery-section { margin-bottom:56px; }
 .gallery-section-title { font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--sage); font-weight:500; margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border); }
 .gallery-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; }
@@ -100,19 +92,17 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
 .gallery-item.tall img { height:360px; }
 .gallery-item.wide img { height:220px; }
 .gallery-item:hover img { transform:scale(1.03); }
-.gallery-caption { position:absolute; bottom:0; left:0; right:0; padding:14px 16px; background:linear-gradient(transparent,rgba(0,0,0,0.65)); color:white; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:13px; opacity:0; transition:opacity 0.3s; }
+.gallery-caption { position:absolute; bottom:0; left:0; right:0; padding:14px 16px; background:linear-gradient(transparent,rgba(0,0,0,0.65)); color:#fff; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:13px; opacity:0; transition:opacity 0.3s; }
 .gallery-item:hover .gallery-caption { opacity:1; }
 .gallery-credit { font-size:11px; color:var(--muted); margin-top:8px; }
 
-/* LIGHTBOX */
 .lightbox { position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:999; display:none; align-items:center; justify-content:center; padding:40px; }
 .lightbox.open { display:flex; }
 .lightbox img { max-width:90vw; max-height:85vh; object-fit:contain; }
-.lightbox-close { position:absolute; top:24px; right:32px; color:white; font-size:36px; cursor:pointer; opacity:0.7; line-height:1; }
+.lightbox-close { position:absolute; top:24px; right:32px; color:#fff; font-size:36px; cursor:pointer; opacity:0.7; line-height:1; }
 .lightbox-close:hover { opacity:1; }
 .lightbox-caption { position:absolute; bottom:24px; left:50%; transform:translateX(-50%); color:rgba(255,255,255,0.6); font-family:'Cormorant Garamond',serif; font-style:italic; font-size:15px; white-space:nowrap; }
 
-/* CONTACT */
 .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
 .contact-intro p { font-family:'Cormorant Garamond',serif; font-size:20px; line-height:1.8; color:var(--ink2); margin-bottom:20px; }
 .contact-item { display:flex; gap:16px; align-items:flex-start; padding:20px 0; border-bottom:1px solid var(--border); }
@@ -160,9 +150,8 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
   </div>
 </nav>
 
-<!-- HOME -->
 <div class="page active" id="page-home">
-  <div class="home-bg" id="home-bg"></div>
+  <div class="home-bg"></div>
   <div class="home-overlay"></div>
   <div class="home-content">
     <div class="home-eyebrow">Oboe · English Horn</div>
@@ -177,12 +166,11 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
     </div>
     <div class="home-social">
       <a class="social-btn" href="https://www.instagram.com/ireneleeoboe" target="_blank">Instagram</a>
-      <a class="social-btn" href="/cdn-cgi/l/email-protection#38514a5d565d545d5d575a575d785f55595154165b5755">Email</a>
+      <a class="social-btn" href="mailto:ireneleeoboe@gmail.com">Email</a>
     </div>
   </div>
 </div>
 
-<!-- BIO -->
 <div class="page" id="page-bio">
   <div class="inner">
     <div class="inner-hero">
@@ -193,9 +181,7 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
       <div class="bio-text">
         <p>Irene Lee is a young oboist whose playing is defined by emotional depth, refined technique, and a natural musicality that reaches beyond her years. A student at The Juilliard School Pre-College Division, Irene began her oboe studies at a young age and quickly distinguished herself in competitions at both the national and international levels.</p>
         <p>Irene has been selected for the National Youth Orchestra of the United States (NYO2) and the prestigious Verbier Festival Junior Orchestra in Switzerland, performing alongside some of the world's finest young musicians.</p>
-        <div class="bio-pull">
-          <p>"The oboe speaks what words cannot — and Irene gives it a voice all her own."</p>
-        </div>
+        <div class="bio-pull"><p>"The oboe speaks what words cannot — and Irene gives it a voice all her own."</p></div>
         <p>In 2026, she was recognized by the National YoungArts Foundation with a Distinction award — one of the highest honors for young artists in America — and performed as a finalist in the International Young Artist Concerto Competition (IYACC). She won First Prize at the 2024 Juilliard Pre-College Open Competition and First Prize at the New Jersey Soloist Competition (Woodwind Division) in 2023.</p>
         <p>Irene continues to develop her artistry with passion and dedication, bringing a rare combination of sensitivity and technical precision to every performance.</p>
       </div>
@@ -209,7 +195,6 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
   </div>
 </div>
 
-<!-- AWARDS -->
 <div class="page" id="page-awards">
   <div class="inner">
     <div class="inner-hero">
@@ -224,7 +209,7 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
           <tr><td class="yr">2026</td><td><div class="aw-title">YoungArts — Distinction <span class="badge b-gold">National</span></div><div class="aw-org">National YoungArts Foundation, USA</div></td></tr>
           <tr><td class="yr">2026</td><td><div class="aw-title">IYACC — Finalist <span class="badge b-int">International</span></div><div class="aw-org">7th International Young Artist Concerto Competition, Chicago</div></td></tr>
           <tr><td class="yr">2026</td><td><div class="aw-title">Adelphi Young Artist Competition — Finalist <span class="badge b-gray">Finalist</span></div><div class="aw-org">Adelphi Orchestra, New York</div></td></tr>
-          <tr><td class="yr">2025</td><td><div class="aw-title">Bravura Philharmonic Young Artists Concerto Competition — Silver Medal <span class="badge b-gray">Silver</span></div><div class="aw-org">Bravura Philharmonic Orchestra</div></td></tr>
+          <tr><td class="yr">2025</td><td><div class="aw-title">Bravura Philharmonic Young Artists Competition — Silver Medal <span class="badge b-gray">Silver</span></div><div class="aw-org">Bravura Philharmonic Orchestra</div></td></tr>
           <tr><td class="yr">2024</td><td><div class="aw-title">Juilliard Pre-College Open Concerto Competition — Winner <span class="badge b-gold">1st Prize</span></div><div class="aw-org">Juilliard Pre-College Division, New York</div></td></tr>
           <tr><td class="yr">2023</td><td><div class="aw-title">NJ Soloist Woodwinds Competition — Winner <span class="badge b-gold">1st Prize</span></div><div class="aw-org">Woodwind Division, New Jersey</div></td></tr>
           <tr><td colspan="2" class="section-divider">Festivals &amp; Orchestras</td></tr>
@@ -246,7 +231,6 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
   </div>
 </div>
 
-<!-- VIDEO -->
 <div class="page" id="page-video">
   <div class="inner">
     <div class="inner-hero">
@@ -262,20 +246,12 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
             <div class="video-sub">Poulenc · 2026 National YoungArts Week</div>
           </div>
         </div>
-        <div class="video-card">
-          <iframe class="video-embed" src="https://www.youtube.com/embed/placeholder" allowfullscreen></iframe>
-          <div class="video-info">
-            <div class="video-title">IYACC Finalist Performance</div>
-            <div class="video-sub">International Young Artist Concerto Competition · 2026</div>
-          </div>
-        </div>
       </div>
     </div>
     <div class="page-footer"><div class="footer-name">IRENE LEE</div><div class="footer-copy">© 2026 Irene Lee. All rights reserved.</div></div>
   </div>
 </div>
 
-<!-- GALLERY -->
 <div class="page" id="page-gallery">
   <div class="inner">
     <div class="inner-hero">
@@ -296,11 +272,11 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
         <div class="gallery-section-title">YoungArts Week 2026 — Miami</div>
         <div class="gallery-grid">
           <div class="gallery-item tall" onclick="openLightbox(this)">
-            <img src="youngarts1.jpg" alt="YoungArts — Irene Lee on screen">
+            <img src="youngarts1.jpg" alt="YoungArts — Irene Lee">
             <div class="gallery-caption">2026 National YoungArts Week · Miami</div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img src="youngarts2.jpg" alt="Irene Lee performing at YoungArts">
+            <img src="youngarts2.jpg" alt="Irene Lee performing">
             <div class="gallery-caption">YoungArts Performance · Irene Lee, Oboe</div>
           </div>
         </div>
@@ -311,14 +287,12 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
   </div>
 </div>
 
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <div class="lightbox-close">×</div>
   <img id="lightbox-img" src="" alt="">
   <div class="lightbox-caption" id="lightbox-caption"></div>
 </div>
 
-<!-- CONTACT -->
 <div class="page" id="page-contact">
   <div class="inner">
     <div class="inner-hero">
@@ -329,7 +303,7 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
       <div class="contact-grid">
         <div class="contact-intro">
           <p>For performance inquiries, collaborations, or press, please reach out via email or the form.</p>
-          <div class="contact-item"><div class="contact-icon">✉</div><div><div class="contact-label">Email</div><div class="contact-value"><a href="/cdn-cgi/l/email-protection#aec7dccbc0cbc2cbcbc1ccc1cbeec9c3cfc7c280cdc1c3"><span class="__cf_email__" data-cfemail="630a11060d060f06060c010c0623040e020a0f4d000c0e">[email&#160;protected]</span></a></div></div></div>
+          <div class="contact-item"><div class="contact-icon">✉</div><div><div class="contact-label">Email</div><div class="contact-value"><a href="mailto:ireneleeoboe@gmail.com">ireneleeoboe@gmail.com</a></div></div></div>
           <div class="contact-item"><div class="contact-icon">☀</div><div><div class="contact-label">Instagram</div><div class="contact-value"><a href="https://www.instagram.com/ireneleeoboe" target="_blank">@ireneleeoboe</a></div></div></div>
           <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-label">Based in</div><div class="contact-value">New York / New Jersey</div></div></div>
           <div class="contact-item"><div class="contact-icon">🎓</div><div><div class="contact-label">Currently studying at</div><div class="contact-value">The Juilliard School<br>Pre-College Division</div></div></div>
@@ -346,25 +320,36 @@ nav.on-page .nav-link:hover, nav.on-page .nav-link.active { color:var(--ink); bo
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-const MAIN_PHOTO = 'photo.jpg';
-window.addEventListener('load', function() {
-  document.getElementById('home-bg').style.cssText = 'position:absolute;inset:0;background-image:url(' + MAIN_PHOTO + ');background-size:cover;background-position:center top;';
-});
-
+<script>
 function showPage(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.nav-link').forEach(function(l) { l.classList.remove('active'); });
   document.getElementById('page-' + id).classList.add('active');
-  const nav = document.getElementById('nav');
+  var nav = document.getElementById('nav');
   nav.className = id === 'home' ? 'on-home' : 'on-page';
-  const map = {bio:0,awards:1,video:2,gallery:3,contact:4};
-  if (map[id] !== undefined) document.querySelectorAll('.nav-link')[map[id]].classList.add('active');
+  var map = {bio:0, awards:1, video:2, gallery:3, contact:4};
+  if (map[id] !== undefined) {
+    document.querySelectorAll('.nav-link')[map[id]].classList.add('active');
+  }
   document.getElementById('page-' + id).scrollTop = 0;
 }
 
 function openLightbox(el) {
-  const img = el.querySelector('img');
-  const cap = el.querySelector('.gallery-caption');
+  var img = el.querySelector('img');
+  var cap = el.querySelector('.gallery-caption');
   document.getElementById('lightbox-img').src = img.src;
   document.getElementById('lightbox-caption').textContent = cap ? cap.textContent : '';
+  document.getElementById('lightbox').classList.add('open');
+  event.stopPropagation();
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
+</body>
+</html>
