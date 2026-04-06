@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awards — Irene Lee</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root { --white:#FFFFFF; --ivory:#FAFAF7; --ink:#1A1A1A; --ink2:#3D3D3D; --muted:#888; --sage:#7A9E87; --sage-light:#EAF1EC; --border:#E5E5E0; --warm:#F5F0E8; }
+html { font-family:'DM Sans',sans-serif; color:var(--ink); background:var(--white); }
+
+nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify-content:space-between; align-items:center; padding:0 56px; height:64px; background:rgba(250,250,247,0.96); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
+.nav-logo a { font-family:'Cinzel',serif; font-size:16px; font-weight:600; letter-spacing:2px; color:var(--ink); text-decoration:none; }
+.nav-links { display:flex; }
+.nav-link { padding:0 20px; height:64px; display:flex; align-items:center; font-size:11px; letter-spacing:2.5px; text-transform:uppercase; font-weight:500; color:var(--muted); text-decoration:none; border-bottom:2px solid transparent; transition:all 0.2s; }
+.nav-link:hover { color:var(--ink); border-bottom-color:var(--sage); }
+.nav-link.active { color:var(--ink); border-bottom-color:var(--sage); }
+
+.inner-hero { background:var(--white); padding:80px 56px 56px; border-bottom:1px solid var(--border); margin-top:64px; }
+.inner-eyebrow { font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--sage); font-weight:500; margin-bottom:12px; }
+.inner-title { font-family:'Cinzel',serif; font-size:clamp(28px,4vw,46px); font-weight:600; color:var(--ink); line-height:1.1; }
+.inner-title em { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:300; color:var(--sage); }
+.inner-body { max-width:880px; margin:0 auto; padding:56px; }
+
+.awards-table { width:100%; border-collapse:collapse; }
+.awards-table thead tr { background:var(--warm); }
+.awards-table th { text-align:left; padding:13px 20px; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); font-weight:500; border-bottom:1px solid var(--border); }
+.awards-table td { padding:18px 20px; border-bottom:1px solid var(--border); vertical-align:top; }
+.awards-table tr:last-child td { border-bottom:none; }
+.awards-table tr:hover td { background:var(--sage-light); }
+.yr { font-family:'Cinzel',serif; font-size:14px; font-weight:600; color:var(--sage); white-space:nowrap; width:100px; }
+.aw-title { font-size:15px; font-weight:500; color:var(--ink); margin-bottom:3px; }
+.aw-org { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:15px; color:var(--muted); }
+.badge { display:inline-block; padding:2px 11px; border-radius:100px; font-size:10px; letter-spacing:1px; text-transform:uppercase; font-weight:500; margin-left:8px; vertical-align:middle; }
+.b-gold { background:#FFF5DC; color:#9A7A00; }
+.b-sage { background:var(--sage-light); color:var(--sage); }
+.b-int  { background:#EEF0FF; color:#4A55A2; }
+.b-gray { background:#F0F0EE; color:var(--muted); }
+.section-divider { padding:12px 20px; background:#f8f8f5; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#888; font-weight:500; border-bottom:1px solid var(--border); border-top:1px solid var(--border); }
+
+.site-footer { background:var(--white); border-top:1px solid var(--border); padding:28px 56px; display:flex; justify-content:space-between; align-items:center; margin-top:80px; }
+.footer-name { font-family:'Cinzel',serif; font-size:14px; color:var(--ink); }
+.footer-copy { font-size:12px; color:var(--muted); }
+
+@media (max-width:768px) {
+  nav { padding:0 20px; }
+  .nav-link { padding:0 10px; font-size:10px; }
+  .inner-hero { padding:48px 24px 40px; }
+  .inner-body { padding:40px 24px; }
+  .site-footer { flex-direction:column; gap:8px; text-align:center; padding:24px; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo"><a href="index.html">IRENE LEE</a></div>
+  <div class="nav-links">
+    <a class="nav-link" href="bio.html">Bio</a>
+    <a class="nav-link active" href="awards.html">Awards</a>
+    <a class="nav-link" href="video.html">Video</a>
+    <a class="nav-link" href="gallery.html">Gallery</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="inner-hero">
+  <div class="inner-eyebrow">Recognition</div>
+  <h1 class="inner-title">Awards <em>& Honors</em></h1>
+</div>
+
+<div class="inner-body">
+  <table class="awards-table">
+    <thead><tr><th>Year</th><th>Award</th></tr></thead>
+    <tbody>
+      <tr><td colspan="2" class="section-divider">Competitions &amp; Awards</td></tr>
+      <tr><td class="yr">2026</td><td><div class="aw-title">YoungArts — Distinction <span class="badge b-gold">National</span></div><div class="aw-org">National YoungArts Foundation, USA</div></td></tr>
+      <tr><td class="yr">2026</td><td><div class="aw-title">IYACC — Finalist <span class="badge b-int">International</span></div><div class="aw-org">7th International Young Artist Concerto Competition, Chicago</div></td></tr>
+      <tr><td class="yr">2026</td><td><div class="aw-title">Adelphi Young Artist Competition — Finalist <span class="badge b-gray">Finalist</span></div><div class="aw-org">Adelphi Orchestra, New York</div></td></tr>
+      <tr><td class="yr">2025</td><td><div class="aw-title">Bravura Philharmonic Young Artists Competition — Silver Medal <span class="badge b-gray">Silver</span></div><div class="aw-org">Bravura Philharmonic Orchestra</div></td></tr>
+      <tr><td class="yr">2024</td><td><div class="aw-title">Juilliard Pre-College Open Concerto Competition — Winner <span class="badge b-gold">1st Prize</span></div><div class="aw-org">Juilliard Pre-College Division, New York</div></td></tr>
+      <tr><td class="yr">2023</td><td><div class="aw-title">NJ Soloist Woodwinds Competition — Winner <span class="badge b-gold">1st Prize</span></div><div class="aw-org">Woodwind Division, New Jersey</div></td></tr>
+      <tr><td colspan="2" class="section-divider">Festivals &amp; Orchestras</td></tr>
+      <tr><td class="yr">2026</td><td><div class="aw-title">Verbier Festival Junior Orchestra <span class="badge b-int">International</span></div><div class="aw-org">Verbier Music Festival, Switzerland</div></td></tr>
+      <tr><td class="yr">2025</td><td><div class="aw-title">Verbier Festival Junior Orchestra <span class="badge b-int">International</span></div><div class="aw-org">Verbier Music Festival, Switzerland</div></td></tr>
+      <tr><td class="yr">2025–</td><td><div class="aw-title">Juilliard Pre-College Orchestra</div><div class="aw-org">The Juilliard School, New York</div></td></tr>
+      <tr><td class="yr">2024</td><td><div class="aw-title">NYO2 — National Youth Orchestra <span class="badge b-sage">National</span></div><div class="aw-org">Carnegie Hall / National Youth Orchestra of the USA</div></td></tr>
+      <tr><td class="yr">2023</td><td><div class="aw-title">NYO2 — National Youth Orchestra <span class="badge b-sage">National</span></div><div class="aw-org">Carnegie Hall / National Youth Orchestra of the USA</div></td></tr>
+      <tr><td class="yr">2021–25</td><td><div class="aw-title">Juilliard Pre-College Symphony Orchestra</div><div class="aw-org">The Juilliard School, New York</div></td></tr>
+      <tr><td colspan="2" class="section-divider">Solo Performances</td></tr>
+      <tr><td class="yr">2024</td><td><div class="aw-title">Soloist with Juilliard Pre-College Symphony Orchestra</div><div class="aw-org">The Juilliard School, New York</div></td></tr>
+      <tr><td class="yr">2024</td><td><div class="aw-title">Soloist with NJ Woodwinds Symphony Orchestra</div><div class="aw-org">New Jersey</div></td></tr>
+      <tr><td class="yr">2022</td><td><div class="aw-title">Soloist with Little Orchestra Society</div><div class="aw-org">New York</div></td></tr>
+      <tr><td class="yr">2022</td><td><div class="aw-title">Soloist with New Virtuoso Orchestra</div><div class="aw-org">New York</div></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-name">IRENE LEE</div>
+  <div class="footer-copy">© 2026 Irene Lee. All rights reserved.</div>
+</footer>
+</body>
+</html>

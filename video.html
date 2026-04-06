@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video — Irene Lee</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root { --white:#FFFFFF; --ivory:#FAFAF7; --ink:#1A1A1A; --ink2:#3D3D3D; --muted:#888; --sage:#7A9E87; --sage-light:#EAF1EC; --border:#E5E5E0; --warm:#F5F0E8; }
+html { font-family:'DM Sans',sans-serif; color:var(--ink); background:var(--ivory); }
+
+nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify-content:space-between; align-items:center; padding:0 56px; height:64px; background:rgba(250,250,247,0.96); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
+.nav-logo a { font-family:'Cinzel',serif; font-size:16px; font-weight:600; letter-spacing:2px; color:var(--ink); text-decoration:none; }
+.nav-links { display:flex; }
+.nav-link { padding:0 20px; height:64px; display:flex; align-items:center; font-size:11px; letter-spacing:2.5px; text-transform:uppercase; font-weight:500; color:var(--muted); text-decoration:none; border-bottom:2px solid transparent; transition:all 0.2s; }
+.nav-link:hover { color:var(--ink); border-bottom-color:var(--sage); }
+.nav-link.active { color:var(--ink); border-bottom-color:var(--sage); }
+
+.inner-hero { background:var(--white); padding:80px 56px 56px; border-bottom:1px solid var(--border); margin-top:64px; }
+.inner-eyebrow { font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--sage); font-weight:500; margin-bottom:12px; }
+.inner-title { font-family:'Cinzel',serif; font-size:clamp(28px,4vw,46px); font-weight:600; color:var(--ink); line-height:1.1; }
+.inner-title em { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:300; color:var(--sage); }
+.inner-body { max-width:880px; margin:0 auto; padding:56px; }
+
+.video-list { display:flex; flex-direction:column; }
+.video-row { display:flex; justify-content:space-between; align-items:center; padding:28px 0; border-bottom:1px solid var(--border); gap:24px; }
+.video-row:first-child { border-top:1px solid var(--border); }
+.video-row-year { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--sage); font-weight:500; margin-bottom:6px; }
+.video-row-title { font-size:17px; font-weight:500; color:var(--ink); margin-bottom:4px; }
+.video-row-sub { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:15px; color:var(--muted); }
+.video-row-btn { display:inline-flex; align-items:center; padding:12px 24px; border:1px solid var(--border); color:var(--ink); font-size:12px; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; font-weight:500; white-space:nowrap; transition:all 0.2s; flex-shrink:0; }
+.video-row-btn:hover { border-color:var(--sage); color:var(--sage); }
+
+.site-footer { background:var(--white); border-top:1px solid var(--border); padding:28px 56px; display:flex; justify-content:space-between; align-items:center; margin-top:80px; }
+.footer-name { font-family:'Cinzel',serif; font-size:14px; color:var(--ink); }
+.footer-copy { font-size:12px; color:var(--muted); }
+
+@media (max-width:768px) {
+  nav { padding:0 20px; }
+  .nav-link { padding:0 10px; font-size:10px; }
+  .inner-hero { padding:48px 24px 40px; }
+  .inner-body { padding:40px 24px; }
+  .video-row { flex-direction:column; align-items:flex-start; }
+  .site-footer { flex-direction:column; gap:8px; text-align:center; padding:24px; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo"><a href="index.html">IRENE LEE</a></div>
+  <div class="nav-links">
+    <a class="nav-link" href="bio.html">Bio</a>
+    <a class="nav-link" href="awards.html">Awards</a>
+    <a class="nav-link active" href="video.html">Video</a>
+    <a class="nav-link" href="gallery.html">Gallery</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="inner-hero">
+  <div class="inner-eyebrow">Listen</div>
+  <h1 class="inner-title">Video <em>& Performances</em></h1>
+</div>
+
+<div class="inner-body">
+  <div class="video-list">
+    <div class="video-row">
+      <div class="video-row-info">
+        <div class="video-row-year">2026</div>
+        <div class="video-row-title">Trio for Oboe, Bassoon and Piano, FP 43</div>
+        <div class="video-row-sub">Poulenc · 2026 National YoungArts Week</div>
+      </div>
+      <a class="video-row-btn" href="https://www.youtube.com/watch?v=OAA1HqUDW9c" target="_blank">▶ Watch on YouTube</a>
+    </div>
+    <div class="video-row">
+      <div class="video-row-info">
+        <div class="video-row-year">2026</div>
+        <div class="video-row-title">IYACC Finalist Performance</div>
+        <div class="video-row-sub">International Young Artist Concerto Competition · Chicago</div>
+      </div>
+      <a class="video-row-btn" href="https://www.youtube.com/@ireneleeoboe" target="_blank">▶ Watch on YouTube</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-name">IRENE LEE</div>
+  <div class="footer-copy">© 2026 Irene Lee. All rights reserved.</div>
+</footer>
+</body>
+</html>
