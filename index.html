@@ -52,72 +52,83 @@ section { min-height:100vh; }
 /* HOME */
 #home {
   position:relative;
-  display:flex; align-items:center;
-  background:url('photo.jpg') right center / cover no-repeat;
+  background:url('photo.jpg') 70% center / cover no-repeat;
   min-height:100vh;
 }
 .home-overlay {
   position:absolute; inset:0;
-  background:linear-gradient(to right, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.1) 100%);
+  background:rgba(0,0,0,0.08);
 }
-.home-content {
-  position:relative; z-index:2;
-  padding:120px 72px 80px;
-  max-width:640px;
+
+/* SCROLL BAR RIGHT */
+.home-scroll-bar {
+  position:absolute; right:40px; top:50%; transform:translateY(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:12px;
+  z-index:10; cursor:pointer;
 }
-.home-eyebrow {
+.hsb-line {
+  width:1px; height:60px;
+  background:linear-gradient(transparent, rgba(255,255,255,0.6));
+  animation:hsb-pulse 2s ease-in-out infinite;
+}
+@keyframes hsb-pulse {
+  0%,100%{opacity:0.4;transform:scaleY(1)}
+  50%{opacity:1;transform:scaleY(0.8)}
+}
+.hsb-dot {
+  width:8px; height:8px; border-radius:50%;
+  border:1px solid rgba(255,255,255,0.7);
+  transition:background 0.2s;
+}
+.home-scroll-bar:hover .hsb-dot { background:white; }
+.hsb-label {
+  font-size:9px; letter-spacing:3px; text-transform:uppercase;
+  color:rgba(255,255,255,0.5);
+  writing-mode:vertical-rl;
+}
+
+/* INTRO SECTION */
+#intro {
+  min-height:100vh; background:var(--ivory);
+  display:flex; align-items:center;
+  padding-top:64px;
+}
+.intro-content {
+  max-width:680px; padding:80px 72px;
+}
+.intro-eyebrow {
   font-size:11px; letter-spacing:4px; text-transform:uppercase;
-  color:rgba(255,255,255,0.55); margin-bottom:20px;
+  color:var(--sage); margin-bottom:20px; font-weight:500;
 }
-.home-name {
+.intro-name {
   font-family:'Cinzel',serif;
-  font-size:clamp(48px,7vw,92px);
+  font-size:clamp(52px,7vw,96px);
   font-weight:600; line-height:1.0;
-  color:#fff; margin-bottom:16px; letter-spacing:2px;
+  color:var(--ink); margin-bottom:16px; letter-spacing:2px;
 }
-.home-title {
+.intro-title {
   font-family:'Cormorant Garamond',serif;
   font-style:italic; font-size:clamp(18px,2vw,24px);
-  color:rgba(255,255,255,0.65); margin-bottom:48px;
+  color:var(--muted); margin-bottom:48px;
 }
-.home-divider { width:48px; height:1px; background:rgba(255,255,255,0.35); margin-bottom:40px; }
-.home-tags { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:36px; }
-.home-tag {
+.intro-divider { width:48px; height:1px; background:var(--border); margin-bottom:40px; }
+.intro-tags { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:48px; }
+.intro-tag {
   padding:7px 18px;
-  border:1px solid rgba(255,255,255,0.25);
+  border:1px solid var(--border);
   font-size:10px; letter-spacing:2px; text-transform:uppercase;
-  color:rgba(255,255,255,0.6);
+  color:var(--ink2);
 }
-.home-social { display:flex; gap:14px; }
-.social-btn {
-  display:inline-flex; align-items:center; padding:10px 22px;
-  border:1px solid rgba(255,255,255,0.25);
-  color:rgba(255,255,255,0.7); font-size:11px; letter-spacing:2px;
-  text-transform:uppercase; text-decoration:none;
-  transition:all 0.2s; font-weight:500;
+.intro-social { display:flex; flex-direction:column; gap:16px; }
+.intro-social-btn {
+  display:inline-flex; align-items:center; gap:12px;
+  color:var(--ink2); text-decoration:none;
+  font-size:14px; transition:color 0.2s;
+  padding-bottom:16px; border-bottom:1px solid var(--border);
 }
-.social-btn:hover { border-color:#fff; color:#fff; }
-
-/* RIGHT SIDE NAV */
-.home-right-nav {
-  position:absolute; right:48px; top:50%; transform:translateY(-50%);
-  z-index:10; display:flex; flex-direction:column; gap:4px;
-}
-.hrn-item {
-  display:flex; align-items:center; justify-content:flex-end; gap:12px;
-  padding:8px 0; cursor:pointer; opacity:0.5; transition:opacity 0.3s;
-  text-decoration:none;
-}
-.hrn-item:hover { opacity:1; }
-.hrn-label {
-  font-size:10px; letter-spacing:3px; text-transform:uppercase;
-  color:#fff; font-weight:500;
-}
-.hrn-line {
-  width:24px; height:1px; background:#fff; display:inline-block;
-  transition:width 0.3s;
-}
-.hrn-item:hover .hrn-line { width:40px; }
+.intro-social-btn:last-child { border-bottom:none; }
+.intro-social-btn:hover { color:var(--sage); }
+.intro-social-btn svg { flex-shrink:0; }
 
 /* INNER PAGES */
 #bio, #awards, #video, #gallery, #contact {
@@ -318,7 +329,7 @@ section { min-height:100vh; }
     </div>
     <div class="home-social">
       <a class="social-btn" href="https://www.instagram.com/ireneleeoboe" target="_blank">Instagram</a>
-      <a class="social-btn" href="mailto:ireneleeoboe@gmail.com">Email</a>
+      <a class="social-btn" href="/cdn-cgi/l/email-protection#7d140f181318111818121f12183d1a101c1411531e1210">Email</a>
     </div>
   </div>
   <div class="home-right-nav">
@@ -463,7 +474,7 @@ section { min-height:100vh; }
     <div class="contact-grid">
       <div class="contact-intro">
         <p>For performance inquiries, collaborations, or press, please reach out via email or the form.</p>
-        <div class="contact-item"><div class="contact-icon">✉</div><div><div class="contact-label">Email</div><div class="contact-value"><a href="mailto:ireneleeoboe@gmail.com">ireneleeoboe@gmail.com</a></div></div></div>
+        <div class="contact-item"><div class="contact-icon">✉</div><div><div class="contact-label">Email</div><div class="contact-value"><a href="/cdn-cgi/l/email-protection#620b10070c070e07070d000d0722050f030b0e4c010d0f"><span class="__cf_email__" data-cfemail="b6dfc4d3d8d3dad3d3d9d4d9d3f6d1dbd7dfda98d5d9db">[email&#160;protected]</span></a></div></div></div>
         <div class="contact-item"><div class="contact-icon">☀</div><div><div class="contact-label">Instagram</div><div class="contact-value"><a href="https://www.instagram.com/ireneleeoboe" target="_blank">@ireneleeoboe</a></div></div></div>
         <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-label">Based in</div><div class="contact-value">New York / New Jersey</div></div></div>
         <div class="contact-item"><div class="contact-icon">🎓</div><div><div class="contact-label">Currently studying at</div><div class="contact-value">The Juilliard School<br>Pre-College Division</div></div></div>
@@ -483,7 +494,7 @@ section { min-height:100vh; }
   <div class="footer-copy">© 2026 Irene Lee. All rights reserved.</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Smooth scroll to section
 function scrollToSection(id) {
   var el = document.getElementById(id);
@@ -507,15 +518,4 @@ window.addEventListener('scroll', function() {
 function openLightbox(el) {
   var img = el.querySelector('img');
   document.getElementById('lightbox-img').src = img.src;
-  document.getElementById('lightbox').classList.add('open');
-  event.stopPropagation();
-}
-function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('open');
-}
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeLightbox();
-});
-</script>
-</body>
-</html>
+  document.ge
