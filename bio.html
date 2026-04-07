@@ -31,9 +31,14 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .bio-info-label { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
 .bio-info-value { font-family:'Cormorant Garamond',serif; font-size:17px; color:var(--ink); line-height:1.4; }
 
-.bio-grid { display:grid; grid-template-columns:1fr 340px; gap:60px; align-items:start; }
-.bio-photo-wrap { position:sticky; top:88px; }
-.bio-photo-wrap img { width:100%; border-radius:4px; display:block; }
+.inner-hero-grid {
+  display:grid; grid-template-columns:1fr 220px;
+  gap:40px; align-items:center;
+}
+.hero-photo-right img {
+  width:100%; border-radius:4px; display:block;
+  box-shadow:0 4px 20px rgba(0,0,0,0.1);
+}
 
 .site-footer { background:var(--white); border-top:1px solid var(--border); padding:28px 56px; display:flex; justify-content:space-between; align-items:center; margin-top:80px; }
 .footer-name { font-family:'Cinzel',serif; font-size:14px; color:var(--ink); }
@@ -45,9 +50,14 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
   .inner-hero { padding:48px 24px 40px; }
   .inner-body { padding:40px 24px; }
   .bio-info { grid-template-columns:1fr; }
-  .bio-grid { display:grid; grid-template-columns:1fr 340px; gap:60px; align-items:start; }
-.bio-photo-wrap { position:sticky; top:88px; }
-.bio-photo-wrap img { width:100%; border-radius:4px; display:block; }
+  .inner-hero-grid {
+  display:grid; grid-template-columns:1fr 220px;
+  gap:40px; align-items:center;
+}
+.hero-photo-right img {
+  width:100%; border-radius:4px; display:block;
+  box-shadow:0 4px 20px rgba(0,0,0,0.1);
+}
 
 .site-footer { flex-direction:column; gap:8px; text-align:center; padding:24px; }
 }
@@ -66,12 +76,18 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 </nav>
 
 <div class="inner-hero">
-  <div class="inner-eyebrow">Biography</div>
-  <h1 class="inner-title">Irene Lee <em>— Oboist</em></h1>
+  <div class="inner-hero-grid">
+    <div>
+      <div class="inner-eyebrow">Biography</div>
+      <h1 class="inner-title">Irene Lee <em>— Oboist</em></h1>
+    </div>
+    <div class="hero-photo-right">
+      <img src="bio_photo.jpg" alt="Irene Lee">
+    </div>
+  </div>
 </div>
 
 <div class="inner-body">
-  <div class="bio-grid">
   <div class="bio-text">
     <p>Irene Lee began her oboe studies at the age of eleven and quickly emerged as one of the most promising young oboists of her generation. A student at The Juilliard School Pre-College Division, she has distinguished herself at the national and international levels through both her artistry and her competitive achievements.</p>
     <p>In 2026, Irene was honored by the National YoungArts Foundation with a Distinction award — one of the highest honors for young artists in the United States. In 2024, she made history at the Juilliard Pre-College Open Concerto Competition, becoming the first oboist in over two decades to win the competition. She also won First Prize at the NJ Soloist Competition. Other recognitions include selection as a finalist for the IYACC in Chicago and a Silver Medal at the Bravura Philharmonic Young Artists Concerto Competition.</p>
@@ -84,10 +100,6 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
     <div class="bio-info-item"><div class="bio-info-label">Instrument</div><div class="bio-info-value">Oboe & English Horn</div></div>
     <div class="bio-info-item"><div class="bio-info-label">School</div><div class="bio-info-value">Juilliard Pre-College</div></div>
     <div class="bio-info-item"><div class="bio-info-label">Based in</div><div class="bio-info-value">New York / New Jersey</div></div>
-  </div>
-  <div class="bio-photo-wrap">
-    <img src="bio_photo.jpg" alt="Irene Lee">
-  </div>
   </div>
 </div>
 
