@@ -36,18 +36,23 @@ html, body { height:100%; }
 .hero-bottom { position:relative; z-index:2; }
 .hero-nav { display:flex; margin-bottom:24px; }
 .hero-nav a {
-  font-size:12px; letter-spacing:3px; text-transform:uppercase;
-  color:rgba(255,255,255,0.78); font-weight:500;
-  margin-right:36px; text-decoration:none;
-  padding-bottom:4px; border-bottom:1px solid transparent;
+  font-size:15px; letter-spacing:3px; text-transform:uppercase;
+  color:#fff; font-weight:700;
+  margin-right:40px; text-decoration:none;
+  padding:8px 20px;
+  border:1px solid rgba(255,255,255,0.5);
+  background:rgba(0,0,0,0.3);
+  backdrop-filter:blur(4px);
   transition:all 0.2s;
 }
-.hero-nav a:hover { color:#fff; border-bottom-color:rgba(255,255,255,0.6); }
+.hero-nav a:hover { background:rgba(255,255,255,0.2); border-color:#fff; }
 .hero-tags { display:flex; gap:10px; flex-wrap:wrap; }
 .hero-tag {
-  font-size:10px; letter-spacing:2px; text-transform:uppercase;
-  color:rgba(255,255,255,0.58); padding:5px 14px;
-  border:1px solid rgba(255,255,255,0.22);
+  font-size:11px; letter-spacing:2px; text-transform:uppercase;
+  color:#fff; padding:6px 16px;
+  border:1px solid rgba(255,255,255,0.5);
+  background:rgba(0,0,0,0.25);
+  backdrop-filter:blur(4px);
 }
 @media (max-width:768px) {
   #hero { padding:32px 24px 40px; }
