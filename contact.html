@@ -93,12 +93,12 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
         <div><div class="contact-label">Currently studying at</div><div class="contact-value">The Juilliard School<br>Pre-College Division</div></div>
       </div>
     </div>
-    <div class="contact-form">
-      <div class="form-field"><label>Your Name</label><input type="text" placeholder="Full name"></div>
-      <div class="form-field"><label>Email</label><input type="email" placeholder="your@email.com"></div>
-      <div class="form-field"><label>Message</label><textarea placeholder="How can I help you?"></textarea></div>
-      <button class="submit-btn">Send Message</button>
-    </div>
+    <form class="contact-form" action="https://formspree.io/f/mqegnpqv" method="POST">
+      <div class="form-field"><label>Your Name</label><input type="text" name="name" placeholder="Full name" required></div>
+      <div class="form-field"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required></div>
+      <div class="form-field"><label>Message</label><textarea name="message" placeholder="How can I help you?" required></textarea></div>
+      <button class="submit-btn" type="submit">Send Message</button>
+    </form>
   </div>
 </div>
 
