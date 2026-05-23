@@ -27,6 +27,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 .gallery-section-title { font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--sage); font-weight:500; margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border); }
 .gallery-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; }
 .gallery-grid.single { grid-template-columns:1fr; max-width:680px; }
+.gallery-grid.portrait { grid-template-columns:1fr; max-width:520px; margin:0 auto; }
 .gallery-item { position:relative; overflow:hidden; border-radius:4px; cursor:pointer; }
 .gallery-item img { width:100%; height:260px; object-fit:cover; display:block; transition:transform 0.4s; }
 .gallery-item.tall img { height:360px; }
@@ -73,6 +74,18 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
 </div>
 
 <div class="inner-body">
+
+  <div class="gallery-section">
+    <div class="gallery-section-title">Juilliard Pre-College 2026 — New York</div>
+    <div class="gallery-grid portrait">
+      <div class="gallery-item" style="aspect-ratio:auto;" onclick="openLightbox(this)">
+        <img src="juilliard.jpg" alt="Irene Lee — Juilliard Pre-College Orchestra program cover, May 2026" style="height:auto !important; object-fit:contain;">
+        <div class="gallery-caption">Pre-College Orchestra · Juilliard, May 2026</div>
+      </div>
+    </div>
+    <div class="gallery-credit">Photo: Claudio Papapietro / Juilliard</div>
+  </div>
+
   <div class="gallery-section">
     <div class="gallery-section-title">YoungArts Week 2026 — Miami</div>
     <div class="gallery-grid">
@@ -87,8 +100,9 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
     </div>
     <div class="gallery-credit">Photo: National YoungArts Foundation</div>
   </div>
+
   <div class="gallery-section">
-    <div class="gallery-section-title">Verbier Music Festival — Switzerland</div>
+    <div class="gallery-section-title">Verbier Music Festival 2025 — Switzerland</div>
     <div class="gallery-grid">
       <div class="gallery-item" onclick="openLightbox(this)">
         <img src="verbier.jpg" alt="Verbier Festival Junior Orchestra">
@@ -100,15 +114,16 @@ nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify
       </div>
     </div>
   </div>
+
   <div class="gallery-section">
-    <div class="gallery-section-title">NYO2 — National Youth Orchestra of the USA</div>
+    <div class="gallery-section-title">NYO2 2024 — Carnegie Hall</div>
     <div class="gallery-grid single">
       <div class="gallery-item" style="aspect-ratio:auto;" onclick="openLightbox(this)">
         <img src="nyo2.jpg" alt="NYO2 at Carnegie Hall" style="height:auto !important; object-fit:contain; background:#f8f8f5;">
         <div class="gallery-caption">NYO2 · Carnegie Hall, New York</div>
       </div>
     </div>
-    <div class="gallery-credit">Photo: Carnegie Hall / National Youth Orchestra of the USA</div>
+    <div class="gallery-credit">Photo: Fadi Kheir / National Youth Orchestra of the USA</div>
   </div>
 
 </div>
